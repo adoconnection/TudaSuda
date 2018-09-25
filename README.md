@@ -27,7 +27,7 @@ public class List : AppCommandProcessor
         Guid? organizationGuid = message?.Data?.organizationGuid;
         
         return this.TransmitConnection(
-              "App/Organization/Sessions/Documents/List",
+              "App/Organization/Sessions/List",
               this.Entities.Sessions
                   .Where(s => s.OrganizationGuid == organizationGuid)
                   .Select(SessionFormatter.Details)

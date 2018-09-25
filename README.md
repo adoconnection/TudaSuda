@@ -1,7 +1,7 @@
 # TudaSuda
 C# SignalR Command/Reply framework
 
-Imagine you call this JS code on your client:
+Imagine you call this JS code on client side:
 
 ```javascript
 uplink.send({
@@ -13,7 +13,7 @@ uplink.send({
 });
 ```
 
-and then process it in mvc fasion like this:
+and then process it like this:
 ```cs
 [TudaSudaCommand(Route = "App/Organization/Sessions/List")]
 public class List : AppCommandProcessor

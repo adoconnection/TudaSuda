@@ -4,6 +4,7 @@ C# SignalR Command/Reply framework
 Imagine you call this JS code on client side:
 
 ```javascript
+
 uplink.send({
     name: 'App/Organization/Sessions/List',
     data:
@@ -11,9 +12,16 @@ uplink.send({
         organizationGuid: $stateParams.organizationGuid
     }
 });
+
+uplink.on('App/Organization/Sessions/List', function(data, commandGuid) {
+    
+    $scope.sessions = data;
+    
+});
+
 ```
 
-and then process it like this:
+Process it on server like this:
 ```cs
 [TudaSudaCommand(Route = "App/Organization/Sessions/List")]
 public class List : AppCommandProcessor

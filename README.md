@@ -1,5 +1,6 @@
 # TudaSuda
-Controllers for websockets – C# SignalR Command/Reply framework
+C# SignalR Command/Reply framework
+Its like controllers for websockets
 
 Imagine you call this JS code on client side:
 
